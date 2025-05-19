@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>eProdemy.id</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    section {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Navbar -->
+<header class="fixed top-0 left-0 w-full bg-red text-white shadow-md z-50">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+    
+    <!-- Kiri: Logo + Nama -->
+    <div class="flex items-center space-x-2">
+      <img src="logo.webp" alt="Logo eProdemy" class="h-8 w-8 object-contain rounded-full"> <!-- logo kecil -->
+      <span class="text-xl font-bold">eProdemy.id</span>
+    </div>
+
+    <!-- Kanan: Navigasi -->
+    <nav class="space-x-6 text-sm flex-shrink-0">
+      <a href="#home" class="hover:text-yellow-400 scroll-link">Home</a>
+      <a href="#services" class="hover:text-yellow-400 scroll-link">Layanan</a>
+      <a href="#courses" class="hover:text-yellow-400 scroll-link">Kursus</a>
+      <a href="#regulasi" class="hover:text-yellow-400 scroll-link">Regulasi</a>
+      <a href="#about" class="hover:text-yellow-400 scroll-link">Tentang Kami</a>
+      <a href="#faq" class="hover:text-yellow-400 scroll-link">FAQ</a>
+    </nav>
+  </div>
+</header>
+  
+  <!-- Home Section -->
+  <section id="home"
+    class="min-h-screen bg-cover bg-center flex flex-col justify-center items-center text-white relative"
+    style="background-image: url('BG.webp');"
+  >
+    <div class="bg-black bg-opacity-50 absolute inset-0 z-0"></div>
+    <div class="z-10 text-center px-4 mt-16">
+      <h1 class="text-4xl font-bold">SELAMAT DATANG</h1>
+      <p class="mt-2 text-lg">di</p>
+      <p class="text-2xl font-medium mt-1">e-Procurement Academy</p>
+    </div>
+    <a href="#services" class="absolute bottom-10 z-10 animate-bounce scroll-link">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none"
+           viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+      </svg>
+    </a>
+  </section>
+
+  <!-- Section Layanan -->
+  <section id="services" 
+  class="min-h-screen bg-cover bg-center flex flex-col justify-center items-center text-white relative"
+    style="background-image: url('Frame\ 10.webp');"
+    >
+      <div class="absolute inset-0 bg-black bg-opacity-40 z-0"></div>
+
+    <div class="max-w-6xl mx-auto px-4 py-16 relative z-10">
+        <div class="flex flex-col md:flex-row items-center md:items-start gap-10">
+
+          <!-- Gambar Carousel -->
+          <div class="w-full md:w-1/2">
+            <div class="overflow-hidden rounded-lg shadow-lg relative h-[400px]">
+              <div id="carouselImages" class="w-full h-full relative">
+                <div class="carousel-item absolute w-full h-full transition-opacity duration-700 opacity-100">
+                  <img src="service1.jpg" loading="lazy" alt="Materi 1" class="w-full h-full object-cover" />
+                  <div class="absolute bottom-0 w-full bg-black bg-opacity-60 p-3 text-sm text-white">Video Pembelajaran Interaktif</div>
+                </div>
+                <div class="carousel-item absolute w-full h-full transition-opacity duration-700 opacity-0">
+                  <img src="Booklet.webp" loading="lazy" alt="Materi 2" class="w-full h-full object-cover" />
+                  <div class="absolute bottom-0 w-full bg-black bg-opacity-60 p-3 text-sm text-white">Booklet Pembelajaran</div>
+                </div>
+                <div class="carousel-item absolute w-full h-full transition-opacity duration-700 opacity-0">
+                  <img src="soal.webp" loading="lazy" alt="Materi 3" class="w-full h-full object-cover" />
+                  <div class="absolute bottom-0 w-full bg-black bg-opacity-60 p-3 text-sm text-white">Pusat Bank Soal</div>
+                </div>
+                <div class="carousel-item absolute w-full h-full transition-opacity duration-700 opacity-0">
+                  <img src="kuis.webp" loading="lazy" alt="Materi 4" class="w-full h-full object-cover" />
+                  <div class="absolute bottom-0 w-full bg-black bg-opacity-60 p-3 text-sm text-white">Game-Based Learning</div>
+                </div>
+              </div>
+              <!-- Tombol Navigasi -->
+              <button id="prevBtn" class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white px-2 py-1 rounded hover:bg-opacity-80 z-20">
+                ‹
+              </button>
+              <button id="nextBtn" class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white px-2 py-1 rounded hover:bg-opacity-80 z-20">
+                ›
+              </button>
+            </div>
+          </div>
+    
+          <!-- Deskripsi -->
+          <div class="w-full md:w-1/2 text-left text-white">
+            <h2 class="text-4xl font-bold mb-10 text-left">Hallo sobat Prodemy</h2>
+            <h3 class="text-2xl font-semibold mb-4">Sudah tau apa itu eProdemy.id belum?</h3>
+            <p class="text-1x1 font-semibold mb-4">eProdemy.id adalah situs pembelajaran paling seru seputar Pengadaan Barang dan Jasa di Indonesia! Di sini, sobat Prodemy bisa belajar dengan cara yang mudah dan menyenangkan tentang dunia pengadaan di lingkungan Pemerintah. Lebih seru lagi karna eProdemy.id bisa diakses kapan saja dan dimana saja dengan mudah! 
+                Yuk, jelajahi bareng-bareng layanan yang ditawarkan!</p>
+            <ul class="list-disc pl-6 space-y-2">
+              <li>Video Pembelajaran Interaktif</li>
+              <li>Booklet Pembelajaran</li>
+              <li>Pusat Bank Soal</li>
+              <li>Game-Based Learning</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+<!-- Section Kursus -->
+<section id="courses" 
+  class="min-h-screen bg-cover bg-center flex flex-col justify-center items-center text-white relative"
+  style="background-image: url('Frame 11.webp');"
+>
+  <div class="absolute inset-0 bg-black bg-opacity-40 z-0"></div>
+
+  <!-- Judul dan Deskripsi -->
+  <div class="relative z-10 w-4/5 max-w-6xl text-center pt-16 mb-12">
+    <h2 class="text-4xl md:text-5xl font-extrabold mb-4 text-white tracking-tight">🚀 Kursus Kami</h2>
+    <p class="text-lg md:text-xl text-white/90">Jelajahi berbagai kursus untuk memperdalam pemahaman Anda dalam bidang pengadaan!</p>
+  </div>
+
+  <!-- Konten Booklet dan Video -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-4/5 max-w-6xl relative z-10">
+    
+    <!-- Card: Booklet dan Bank Soal -->
+    <div class="bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-lg p-6 rounded-2xl shadow-xl border border-white/30 transition-transform hover:-translate-y-1">
+      <h3 class="text-2xl font-bold mb-4 text-white flex items-center gap-2">
+        📘 Booklet & Bank Soal
+      </h3>
+      <p class="text-white/90 mb-4">Unduh dokumen booklet kami untuk materi pengadaan yang lebih lengkap dan praktis.</p>
+      <a href="https://drive.google.com/drive/folders/1OYSWn2HxA9v3ok_WG_rgvkOaS_yWQt4n?usp=drive_link" target="_blank"
+         class="inline-block bg-blue-600 hover:bg-blue-700 transition duration-300 text-white px-4 py-2 rounded-lg shadow mb-4">
+        Download Booklet
+      </a>
+      <p class="text-white/90 mb-4">Unduh dokumen bank soal kami untuk menantang diri kalian.</p>
+      <a href="https://drive.google.com/drive/folders/1Wtj6e6th-r_LA0Wz0RLLeFNxMAVnM1mA?usp=drive_link" target="_blank"
+         class="inline-block bg-indigo-600 hover:bg-indigo-700 transition duration-300 text-white px-4 py-2 rounded-lg shadow mb-4">
+        Download Bank Soal
+      </a>
+
+      <!-- Games -->
+      <div class="mt-6 border-t border-white/20 pt-4">
+        <h4 class="text-2xl font-semibold mb-2 text-white flex items-center gap-2">👾 Games Pengadaan</h4>
+        <p class="text-white/80 mb-2">Ingin belajar sambil bermain?</p>
+        <a href="https://drive.google.com/drive/folders/1oI-TZh0gRdKc2Dm6cpFlauPrwxNWrJqA?usp=drive_link" target="_blank" 
+           class="inline-block bg-green-600 hover:bg-green-700 transition duration-300 text-white px-4 py-2 rounded-lg shadow">
+          Mainkan Game Edukasi
+        </a>
+      </div>
+    </div>
+
+    <!-- Card: Video Pembelajaran -->
+    <div class="bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-lg p-6 rounded-2xl shadow-xl border border-white/30 transition-transform hover:-translate-y-1">
+      <h3 class="text-2xl font-bold mb-4 text-white flex items-center gap-2">
+        🎥 Video Pembelajaran
+      </h3>
+      <div class="w-full aspect-video rounded-xl overflow-hidden shadow-lg">
+        <iframe class="w-full h-full rounded-xl" 
+                src="https://www.youtube.com/embed/qUCwUlQPITc" 
+                frameborder="0" allowfullscreen>
+        </iframe>
+      </div>
+      <!-- Deskripsi Video -->
+      <p class="text-white/90 text-sm md:text-base leading-relaxed">
+       Bagaimana sih Harga Perkiran Sendiri itu di susun, yuk kita selidiki
+       </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+ <!-- Include Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<!-- Section Regulasi -->
+<section id="regulasi" 
+class="min-h-screen bg-cover bg-center flex flex-col justify-center items-center text-white relative"
+    style="background-image: url('Frame\ 12.webp');"
+    >
+      <div class="absolute inset-0 bg-black bg-opacity-40 z-0"></div>
+
+  <div class="max-w-7xl mx-auto">
+    <!-- Judul & Deskripsi -->
+    <div class="text-center mb-12 relative z-10">
+      <h2 class="text-4xl md:text-5xl font-extrabold mb-4 text-white tracking-tight">Sumber Hukum</h2>
+      <p class="mt-2 text-lg text-white">Peraturan yang menjadi dasar hukum dalam pengadaan barang dan jasa</p>
+    </div>
+
+    <!-- Carousel Wrapper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <!-- Card 1 -->
+        <div class="swiper-slide">
+          <div class="min-w-[300px] bg-white text-[#3a0d0d] rounded-2xl shadow-lg overflow-hidden h-[360px] flex flex-col transform transition duration-300 hover:scale-102 hover:shadow-2xl overflow-hidden">
+            <img src="UUNO17TAHUN2003.webp" loading="lazy" class="rounded-t-2xl w-full h-48 object-contain p-4" alt="Preview UU No. 17 Tahun 2003" />
+            <div class="flex-1 flex flex-col justify-between p-4">
+              <h3 class="font-semibold text-lg">UU No. 17 Tahun 2003</h3>
+              <p class="text-sm mt-1">Tentang Keuangan Negara</p>
+              <a href="Undang Undang Nomor 17 Tahun 2003 tentang Keuangan Negara.pdf" target="_blank" class="text-red-700 font-bold underline">
+                Lihat Dokumen
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="swiper-slide">
+          <div class="min-w-[300px] bg-white text-[#3a0d0d] rounded-2xl shadow-lg overflow-hidden h-[360px] flex flex-col transform transition duration-300 hover:scale-102 hover:shadow-2xl overflow-hidden">
+            <img src="UUNO1TAHUN2004.webp" loading="lazy" class="rounded-t-2xl w-full h-48 object-contain p-4" alt="Preview UU No. 1 Tahun 2004" />
+            <div class="flex-1 flex flex-col justify-between p-4">
+              <h3 class="font-semibold text-lg">UU No. 1 Tahun 2004</h3>
+              <p class="text-sm mt-1">Tentang Perbendaharaan Negara</p>
+              <a href="Undang Undang Nomor 1 Tahun 2004 tentang Perbendaharaan Negara.pdf" target="_blank" class="text-red-700 font-bold underline">
+                Lihat Dokumen
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="swiper-slide">
+          <div class="min-w-[300px] bg-white text-[#3a0d0d] rounded-2xl shadow-lg overflow-hidden h-[360px] flex flex-col transform transition duration-300 hover:scale-102 hover:shadow-2xl overflow-hidden">
+            <img src="PPNO38TAHUN2008.webp" loading="lazy" class="rounded-t-2xl w-full h-48 object-contain p-4" alt="Preview PP No. 38 Tahun 2008" />
+            <div class="flex-1 flex flex-col justify-between p-4">
+              <h3 class="font-semibold text-lg">PP No. 38 Tahun 2008</h3>
+              <p class="text-sm mt-1">Tentang Perubahan Atas PP No. 6 Tahun 2006 Tentang Pengelolaan Barang Milik Negara Daerah</p>
+              <a href="PP38Tahun2008.pdf" target="_blank" class="text-red-700 font-bold underline">
+                Lihat Dokumen
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="swiper-slide">
+          <div class="min-w-[300px] bg-white text-[#3a0d0d] rounded-2xl shadow-lg overflow-hidden h-[360px] flex flex-col transform transition duration-300 hover:scale-102 hover:shadow-2xl overflow-hidden">
+            <img src="PERPRES12TAHUN2021.webp" loading="lazy" class="rounded-t-2xl w-full h-48 object-contain p-4" alt="Preview Perpres No. 12 Tahun 2021" />
+            <div class="flex-1 flex flex-col justify-between p-4">
+              <h3 class="font-semibold text-lg">Perpres No. 12 Tahun 2021</h3>
+              <p class="text-sm mt-1">Tentang Perubahan Atas Peraturan Presiden Nomor 16 Tahun 2018 Tentang Pengadaan Barang/Jasa Pemerintah</p>
+              <a href="Perpres Nomor 12 Tahun 2021.pdf" target="_blank" class="text-red-700 font-bold underline">
+                Lihat Dokumen
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="swiper-slide">
+          <div class="min-w-[300px] bg-white text-[#3a0d0d] rounded-2xl shadow-lg overflow-hidden h-[360px] flex flex-col transform transition duration-300 hover:scale-102 hover:shadow-2xl overflow-hidden">
+            <img src="PERPRES16TAHUN2018.webp" loading="lazy" class="rounded-t-2xl w-full h-48 object-contain p-4" alt="Preview Perpres No. 16 Tahun 2018" />
+            <div class="flex-1 flex flex-col justify-between p-4">
+              <h3 class="font-semibold text-lg">Perpres No. 16 Tahun 2018</h3>
+              <p class="text-sm mt-1">Tentang Pengadaan Barang/Jasa Pemerintah</p>
+              <a href="Perpres Nomor 16 Tahun 2018.pdf" target="_blank" class="text-red-700 font-bold underline">
+                Lihat Dokumen
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pagination (optional) -->
+      <div class="swiper-pagination mt-6"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Include Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  const swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,  // Tampilkan 3 dokumen di layar awal
+    spaceBetween: 20,   // Spasi antar dokumen
+    autoplay: {
+      delay: 10000,     // Otomatis berganti setiap 10 detik
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      1024: {
+        slidesPerView: 3,  // Tampilkan 3 dokumen di layar besar
+      },
+      768: {
+        slidesPerView: 2,  // Tampilkan 2 dokumen di layar medium
+      },
+      0: {
+        slidesPerView: 1,  // Tampilkan 1 dokumen di layar kecil
+      },
+    },
+  });
+</script>
+
+ <!-- Section Tentang Kami -->
+<section id="about" 
+  class="min-h-screen bg-cover bg-center flex flex-col justify-center items-center text-white relative"
+  style="background-image: url('Frame 13.webp');"
+>
+  <div class="absolute inset-0 bg-black bg-opacity-40 z-0"></div>
+
+  <div class="flex flex-col md:flex-row justify-between items-center w-full max-w-screen-xl mx-auto">
+    <div class="md:w-1/2 mb-10 md:mb-0 relative z-10">
+      <h2 class="text-4xl font-bold mb-6 text-white">Meet the Founders!</h2>
+      <p class="text-xl font-semibold mb-2 text-white">Siapa sih mereka?</p>
+      <p id="dynamic-description" class="text-lg transition-opacity duration-300 text-left mt-2">
+        Mahasiswa Universitas Gadjah Mada
+      </p>
+    </div>
+
+    <div class="flex space-x-7 md:w-1/2 justify-center relative">
+      <!-- Rendy -->
+      <div class="relative w-[180px] h-[460px] rounded-md overflow-hidden transition-all duration-480 transform hover:scale-125 hover:z-20 hover:translate-z-6 founder-photo" 
+        data-description="<ul class='list-disc list-inside'><li>Applied Accounting UGM Student, Class of 2022</li><li>Head of Treasurer at KKN-PPM UGM Saba Mortara, Morowali Utara</li><li>Former Intern in The Finance and Assets Team at BSKP Kemendikdasmen</li></ul>">
+        <a href="https://www.linkedin.com/in/rendy-probo-kuncoro" target="_blank" rel="noopener noreferrer">
+          <img src="rendy1.webp" loading="lazy" alt="Rendy Probo Kuncoro" class="w-full h-full object-cover transition duration-300 shadow-xl">
+          <div class="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-black/100 to-transparent flex flex-col items-center justify-end p-2">
+            <p class="text-sm text-white font-semibold text-center leading-tight">Rendy Probo Kuncoro</p>
+            <p class="text-xs text-white font-light mt-1 text-center">Web Developer</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Ayu -->
+      <div class="relative w-[180px] h-[460px] rounded-md overflow-hidden transition-all duration-480 transform hover:scale-125 hover:z-20 hover:translate-z-6 founder-photo" 
+        data-description="<ul class='list-disc list-inside'><li>Applied Accounting UGM Student, Class of 2022</li><li>Head of Finance KKN-PPM UGM Bakung Senandika, Blitar</li><li>Awardee '24 Temasek Foundation Scholarship</li><li>Ex-Administrative Officer Intern at PT TASPEN Persero Tbk.</li></ul>">
+        <a href="https://www.linkedin.com/in/sangayugandari" target="_blank" rel="noopener noreferrer">
+          <img src="Ayu.webp" loading="lazy" alt="Sang Ayu Ketut Gandari" class="w-full h-full object-cover transition duration-300 shadow-xl">
+          <div class="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-black/100 to-transparent flex flex-col items-center justify-end p-2">
+            <p class="text-sm text-white font-semibold text-center leading-tight">Sang Ayu Ketut Gandari</p>
+            <p class="text-xs text-white font-light mt-1 text-center">Motion & Graphic Designer</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Fauzan -->
+      <div class="relative w-[180px] h-[460px] rounded-md overflow-hidden transition-all duration-480 transform hover:scale-125 hover:z-20 hover:translate-z-6 founder-photo" 
+        data-description="<ul class='list-disc list-inside'><li>Applied Accounting UGM Student, Class of 2022</li><li>Tax Volunteer at Renjani 2025</li><li>Audit Staff at Badan Audit Kemahasiswaan</li></ul>">
+        <a href="https://www.linkedin.com/in/jihad-muamar-fauzan-68b4b7291" target="_blank" rel="noopener noreferrer">
+          <img src="ojan1.jpg" loading="lazy" alt="Jihad Muamar Fauzan" class="w-full h-full object-cover transition duration-300 shadow-xl">
+          <div class="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-black/100 to-transparent flex flex-col items-center justify-end p-2">
+            <p class="text-sm text-white font-semibold text-center leading-tight">Jihad Muamar Fauzan</p>
+            <p class="text-xs text-white font-light mt-1 text-center">Copywriter</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const founderPhotos = document.querySelectorAll('.founder-photo');
+  const descElement = document.getElementById('dynamic-description');
+
+  founderPhotos.forEach(photo => {
+    photo.addEventListener('mouseenter', () => {
+      const newDesc = photo.getAttribute('data-description');
+      descElement.style.opacity = 0;
+      setTimeout(() => {
+        descElement.innerHTML = newDesc;
+        descElement.style.opacity = 1;
+      }, 200);
+    });
+
+    photo.addEventListener('mouseleave', () => {
+      descElement.style.opacity = 0;
+      setTimeout(() => {
+        descElement.textContent = 'Mahasiswa Universitas Gadjah Mada';
+        descElement.style.opacity = 1;
+      }, 200);
+    });
+  });
+</script>
+
+
+  <!-- Section FAQ -->
+  <section id="faq" 
+  class="min-h-screen bg-cover bg-center flex flex-col justify-center items-center text-white relative"
+    style="background-image: url('Frame\ 14.webp');"
+    >
+      <div class="absolute inset-0 bg-black bg-opacity-40 z-0"></div>
+      
+    <div class="text-center relative z-10">
+      <h2 class="text-4xl font-bold mb-6 text-white">FAQ</h2>
+      <p class="text-lg text-white mb-2">Temukan jawaban atas pertanyaan yang sering diajukan seputar layanan kami.</p>
+    
+     <div class="space-y-6 text-left">
+      <div class="bg-white bg-opacity-10 backdrop-blur-md p-4 rounded-xl border border-white/20">
+        <h3 class="font-semibold text-xl mb-2">Apa itu eprodemy.id?</h3>
+        <p class="text-gray-200">eprodemy.id adalah platform pembelajaran daring yang fokus pada pengadaan barang dan jasa pemerintah. Kami menyediakan modul, webinar, dan sertifikasi yang terstruktur dan mudah dipahami.</p>
+      </div>
+      <div class="bg-white bg-opacity-10 backdrop-blur-md p-4 rounded-xl border border-white/20">
+        <h3 class="font-semibold text-xl mb-2">Apakah saya harus punya latar belakang PNS untuk ikut belajar?</h3>
+        <p class="text-gray-200">Tidak! Platform ini terbuka untuk siapa saja, baik Anda ASN, pegawai swasta, mahasiswa, maupun pelaku UMKM yang ingin memahami pengadaan secara legal dan profesional.</p>
+      </div>
+      <div class="bg-white bg-opacity-10 backdrop-blur-md p-4 rounded-xl border border-white/20">
+        <h3 class="font-semibold text-xl mb-2">Apakah eprodemy.id menyediakan sertifikat resmi?</h3>
+        <p class="text-gray-200">Ya. Setiap peserta yang menyelesaikan pelatihan akan mendapatkan e-sertifikat resmi yang dapat digunakan untuk pengembangan karier dan bukti kompetensi.</p>
+      </div>
+      <div class="bg-white bg-opacity-10 backdrop-blur-md p-4 rounded-xl border border-white/20">
+        <h3 class="font-semibold text-xl mb-2">Bagaimana cara memulai belajar?</h3>
+        <p class="text-gray-200">Cukup daftar di eprodemy.id, pilih kursus yang kamu butuhkan, dan mulai belajar kapan saja dan di mana saja. Semua materi bisa diakses fleksibel dan mobile-friendly.</p>
+      </div>
+    </div>
+  </div>  
+  </section>
+
+  <!-- JavaScript Smooth Scroll Enhancement -->
+  <script>
+    // Manual Scroll Offset for Navbar
+    document.querySelectorAll('.scroll-link').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const href = link.getAttribute('href');
+        const target = document.querySelector(href);
+        if (target) {
+          window.scrollTo({
+            top: target.offsetTop - 0,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // Carousel Logic
+    const items = document.querySelectorAll('.carousel-item');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    let index = 0;
+    let interval;
+
+    function show(indexToShow) {
+      items.forEach((item, i) => {
+        item.style.opacity = i === indexToShow ? '1' : '0';
+      });
+    }
+
+    function nextSlide() {
+      index = (index + 1) % items.length;
+      show(index);
+    }
+
+    function prevSlide() {
+      index = (index - 1 + items.length) % items.length;
+      show(index);
+    }
+
+    prevBtn.addEventListener('click', () => {
+      prevSlide();
+      resetInterval();
+    });
+
+    nextBtn.addEventListener('click', () => {
+      nextSlide();
+      resetInterval();
+    });
+
+    function resetInterval() {
+      clearInterval(interval);
+      interval = setInterval(nextSlide, 3000);
+    }
+
+    show(index);
+    interval = setInterval(nextSlide, 3000);
+
+    // Auto Slide to Layanan after delay
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        const layananSection = document.querySelector('#services');
+        if (layananSection) {
+          window.scrollTo({
+            top: layananSection.offsetTop - 0,
+            behavior: 'smooth'
+          });
+        }
+      }, 4000); // 4 detik delay
+    });
+  </script>
+</body>
+</html>
